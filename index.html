@@ -38,8 +38,13 @@
 
         
     #banner-B {
-        transition: transform .2s;
-        width: 1600px;
+        width: 600px;
+
+    }
+
+            
+    #banner-B-img {
+        width: 200px;
     }
     
     #product-banner img {
@@ -87,6 +92,13 @@
         width: 200px;
         margin-right: 50px;
     }
+
+    .product-view-element-B {
+        display: inline-block;
+        position: relative;
+        width: 200px;
+        margin-right: 50px;
+    }
     
     .product-view-element-C {
         display: inline-block;
@@ -96,6 +108,11 @@
     }
     
     #product-A {
+        position: relative;
+        width: 600px;
+    }
+
+    #product-B {
         position: relative;
         width: 600px;
     }
@@ -370,22 +387,22 @@
         <div id="products-wrapper" class="image-wrapper display-none">
             <ul id="images">
                 <li>
-                    <div id="project-A" class="imageAndText" onclick="showProjectA(this);disableProjectC(this); disableNav(this); showProject(this);">Growth Visualization Project</div>
+                    <div id="project-A" class="imageAndText" onclick="showProjectA(this);disableProjectB(this);disableProjectC(this); disableNav(this); showProject(this);">Growth Visualization Project</div>
                 </li>
                 <li>
-                    <div id="project-B" class="imageAndText" onclick="disableProjectA(this);disableProjectC(this);disableNav(this); showProject(this);">UPMC MyCare Service</div>
+                    <div id="project-B" class="imageAndText" onclick="disableProjectA(this);showProjectB(this);disableProjectC(this);disableNav(this); showProject(this);">UPMC MyCare Service</div>
                 </li>
                 <li>
-                    <div id="project-C" class="imageAndText" onclick="disableProjectA(this);showProjectC(this);disableNav(this); showProject(this);">Design Concept Map</div>
+                    <div id="project-C" class="imageAndText" onclick="disableProjectA(this);disableProjectB(this);showProjectC(this);disableNav(this); showProject(this);">Design Concept Map</div>
                 </li>
                 <li>
-                    <div id="project-D" class="imageAndText" onclick="disableProjectA(this);disableProjectC(this);disableNav(this); showProject(this);">Look Good</div>
+                    <div id="project-D" class="imageAndText" onclick="disableProjectA(this);disableProjectB(this);disableProjectC(this);disableNav(this); showProject(this);">Look Good</div>
                 </li>
                 <li>
-                    <div id="project-E" class="imageAndText" onclick="disableProjectA(this);disableProjectC(this);disableNav(this); showProject(this);">Closet</div>
+                    <div id="project-E" class="imageAndText" onclick="disableProjectA(this);disableProjectB(this);disableProjectC(this);disableNav(this); showProject(this);">Closet</div>
                 </li>
                 <li>
-                    <div id="project-F" class="imageAndText" onclick="disableProjectA(this);disableProjectC(this);disableNav(this); showProject(this);">Helvetica</div>
+                    <div id="project-F" class="imageAndText" onclick="disableProjectA(this);disableProjectB(this);disableProjectC(this);disableNav(this); showProject(this);">Helvetica</div>
                 </li>
             </ul>
         </div>
@@ -424,7 +441,12 @@
     </div>
     <div id="product-banner" class="display-none">
         <img id="banner-A" src="images/image_005.gif">
-        <img id="banner-B" src="images/image_008.jpg">
+        <div id="banner-B">
+        <img id="banner-B-img"src="images/image_008.jpg">
+        <a href="./images/image_008.jpg" download="image_008.jpg" style="position: relative;
+        top: 35px;
+        left: 10%; text-decoration: none; color:black">download image</a>
+        </div>
         <img id="banner-C" src="images/image_006.jpg">
     </div>
     <div id="product-view-wrapper" class="display-none">
@@ -459,6 +481,12 @@
                 <div style="height:300px; width:auto;"></div>
             </div>
         </div>
+        <div id="product-B" class="product-view-element-B note display-none">
+            <div>
+                <h1 style="display:block; font-size: 16px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">WHAT DOES THIS PROJECT DO?</h1>
+                This project is about manifesting a concept and study intented to encourage people build a habit for savings.
+            </div>
+        </div>
         <div id="product-C" class="product-view-element-C note display-none">
             <div>
                 <h1 style="display:block; font-size: 16px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">WHAT DOES THIS PROJECT DO?</h1>
@@ -487,6 +515,7 @@
                 <img clas src="images/image_006.jpg">
             </div>
         </div>
+        
     </div>
 </div>
 <script>
@@ -573,6 +602,19 @@
         document.querySelector("#product-A").classList.add("display-none");
         document.querySelector("#banner-A").classList.add("display-hidden");
         document.querySelector(".product-view-element-A").classList.add("display-none")
+    }
+
+    const showProjectB = () => {
+        document.querySelector("#product-B").classList.remove("display-none")
+        document.querySelector("#banner-B").classList.remove("display-hidden");
+        document.querySelector(".product-view-element-B").classList.remove("display-none")
+
+    }
+
+    const disableProjectB = () => {
+        document.querySelector("#product-B").classList.add("display-none");
+        document.querySelector("#banner-B").classList.add("display-hidden");
+        document.querySelector(".product-view-element-B").classList.add("display-none")
     }
 
     const showProjectC = () => {
