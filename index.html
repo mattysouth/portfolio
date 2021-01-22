@@ -1,4 +1,11 @@
 <style>
+    .product-view-element-C-invisible {
+        display: none !important;
+        position: relative;
+        width: 800px;
+        margin-right: 50px;
+    }
+
     .display-hidden {
         top: 600px !important;
         display: none !important;
@@ -116,19 +123,48 @@
         width: 800px;
         margin-right: 50px;
     }
-    .product-view-element-C-map {
-        transform-origin: top left;
+
+    .product-view-element-D {
+        display: inline-block;
+        position: relative;
+        width: 450px;
+        margin-right: 50px;
+    }
+
+    .product-view-element-A-frame {
+        display: inline-block;
+        position: relative;
+        width: 450px;
+        margin-right: 50px;
+    }
+
+    .product-view-element-B-frame {
+        display: inline-block;
+        position: relative;
+        width: 450px;
+        margin-right: 50px;
+    }
+
+    .product-view-element-C-frame {
         display: inline-block;
         position: relative;
         width: 800px;
         margin-right: 50px;
     }
 
-
-    .product-view-element-D {
+    .product-view-element-D-frame {
         display: inline-block;
         position: relative;
         width: 450px;
+        margin-right: 50px;
+    }
+
+
+    .product-view-element-C-map {
+        transform-origin: top left;
+        display: inline-block;
+        position: relative;
+        width: 800px;
         margin-right: 50px;
     }
 
@@ -176,7 +212,7 @@
         cursor: pointer;
     }
 
-    .product-view-element-C img {
+    .product-view-element-C-map img {
         position: relative;
         width: 600px;
     }
@@ -535,7 +571,7 @@
         <img id="banner-D" src="images/image_015.jpg">
     </div>
     <div id="product-view-wrapper" class="display-none">
-        <div id="product-A" class="product-view-element-A note display-none">
+        <div id="product-A" class="product-view-element-A-frame note display-none">
             <div>
                 <h1
                     style="display:block; font-size: 16px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
@@ -615,7 +651,7 @@
                 <div style="height:300px; width:auto;"></div>
             </div>
         </div>
-        <div id="product-B" class="product-view-element-B note display-none">
+        <div id="product-B" class="product-view-element-B-frame note display-none">
             <div>
                 <h1
                     style="display:block; font-size: 16px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
@@ -634,8 +670,8 @@
                 <div style="height:300px; width:auto;"></div>
             </div>
         </div>
-        <div id="product-C" class="product-view-element-C note display-none">
-            <div>
+        <div id="product-C" class="product-view-element-C-frame note display-none">
+            <div class="product-view-element-C" style="width: 600px !important;">
                 <h1
                     style="display:block; font-size: 16px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
                     ABOUT</h1>
@@ -688,7 +724,7 @@
                 <div style="height:300px; width:auto;"></div>
             </div>
         </div>
-        <div id="product-D" class="product-view-element-D note display-none">
+        <div id="product-D" class="product-view-element-D-frame note display-none">
             <div>
                 <h1
                     style="display:block; font-size: 16px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
@@ -708,7 +744,8 @@
                 of a digital environment.
             </div>
         </div>
-        <div id="product-D-dem" class="product-view-element-D note display-none" style="width: 1600px !important;">
+        <div id="product-D-dem" class="product-view-element-D-frame note display-none"
+            style="width: 1600px !important;">
             <br>
             <div class="product-view-element-D-small">
                 <img src="images/image_016.gif">
@@ -875,11 +912,31 @@
 
     $(document).ready(function () {
         $(".product-view-element-C-map").hover(function () {
+            $(this).stop().animate({
+                opacity: 1
+            }).siblings().stop().animate({
+                opacity: 0.0
+            });
             $(this).css("transform-origin", "top left");
             $(this).css("transform", "scale(2.0)");
         }, function () {
             $(this).css("transform-origin", "top left");
             $(this).css("transform", "scale(1.0)");
+            $(this).siblings().stop().animate({
+                opacity: 1
+            });
+        });
+    }, function () {
+    });
+    $(".product-view-element-C").hover(function () {
+        $(this).stop().animate({
+            opacity: 1
+        }).siblings().stop().animate({
+            opacity: 0.0
+        });
+    }, function () {
+        $(this).siblings().stop().animate({
+            opacity: 1
         });
     });
 </script>
