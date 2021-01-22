@@ -116,6 +116,14 @@
         width: 800px;
         margin-right: 50px;
     }
+    .product-view-element-C-map {
+        transform-origin: top left;
+        display: inline-block;
+        position: relative;
+        width: 800px;
+        margin-right: 50px;
+    }
+
 
     .product-view-element-D {
         display: inline-block;
@@ -635,7 +643,7 @@
                 to shape a framework for new ways of considering the world around us.
             </div>
             <br>
-            <div class="product-view-element-C">
+            <div class="product-view-element-C-map">
                 <img clas src="images/image_025.jpg">
             </div>
             <br>
@@ -651,7 +659,7 @@
                 <br>
             </div>
             <br>
-            <div class="product-view-element-C">
+            <div class="product-view-element-C-map">
                 <img clas src="images/image_023.jpg">
             </div>
             <div class="product-view-element-C" style="width: 600px !important;">
@@ -668,11 +676,11 @@
                 work in silos.
             </div>
             <br>
-            <div class="product-view-element-C">
+            <div class="product-view-element-C-map">
                 <img clas src="images/image_024.jpg">
             </div>
             <br>
-            <div class="product-view-element-C">
+            <div class="product-view-element-C-map">
                 <img clas src="images/image_022.jpg">
             </div>
             <br>
@@ -863,6 +871,15 @@
         document.querySelector("#header").classList.add("display-none");
         document.querySelector("#transition-wrapper").classList.add("display-none");
         document.querySelector("#products-wrapper").classList.remove("display-none");
-
     }
+
+    $(document).ready(function () {
+        $(".product-view-element-C-map").hover(function () {
+            $(this).css("transform-origin", "top left");
+            $(this).css("transform", "scale(2.0)");
+        }, function () {
+            $(this).css("transform-origin", "top left");
+            $(this).css("transform", "scale(1.0)");
+        });
+    });
 </script>
