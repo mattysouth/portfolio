@@ -33,17 +33,22 @@
     }
         
     #banner-A {
-        width: 600px;
+        width: 1500px;
     }
         
     #banner-B {
-        width: 600px;
+        width: 1500px;
 
     }
 
     #banner-C {
-        width: 600px;
+        width: 1500px;
     }
+
+    #banner-D {
+        width: 1500px;
+    }
+    
     #banner-B-img {
         width: 200px;
     }
@@ -107,6 +112,13 @@
         width: 200px;
         margin-right: 50px;
     }
+
+    .product-view-element-D {
+        display: inline-block;
+        position: relative;
+        width: 200px;
+        margin-right: 50px;
+    }
     
     #product-A {
         position: relative;
@@ -119,6 +131,11 @@
     }
     
     #product-C {
+        position: relative;
+        width: 600px;
+    }
+
+    #product-D {
         position: relative;
         width: 600px;
     }
@@ -388,22 +405,22 @@
         <div id="products-wrapper" class="image-wrapper display-none">
             <ul id="images">
                 <li>
-                    <div id="project-A" class="imageAndText" onclick="showProjectA(this);disableProjectB(this);disableProjectC(this); disableNav(this); showProject(this);">Growth Visualization Project</div>
+                    <div id="project-A" class="imageAndText" onclick="showProjectA(this);disableProjectB(this);disableProjectC(this);disableProjectD(this); disableNav(this); showProject(this);">Growth Visualization Project</div>
                 </li>
                 <li>
-                    <div id="project-B" class="imageAndText" onclick="disableProjectA(this);showProjectB(this);disableProjectC(this);disableNav(this); showProject(this);">UPMC MyCare Service</div>
+                    <div id="project-B" class="imageAndText" onclick="disableProjectA(this);showProjectB(this);disableProjectC(this);disableProjectD(this);disableNav(this); showProject(this);">UPMC MyCare Service</div>
                 </li>
                 <li>
-                    <div id="project-C" class="imageAndText" onclick="disableProjectA(this);disableProjectB(this);showProjectC(this);disableNav(this); showProject(this);">Design Concept Map</div>
+                    <div id="project-C" class="imageAndText" onclick="disableProjectA(this);disableProjectB(this);showProjectC(this);disableProjectD(this);disableNav(this); showProject(this);">Design Concept Map</div>
                 </li>
                 <li>
-                    <div id="project-D" class="imageAndText" onclick="disableProjectA(this);disableProjectB(this);disableProjectC(this);disableNav(this); showProject(this);">Look Good</div>
+                    <div id="project-D" class="imageAndText" onclick="disableProjectA(this);disableProjectB(this);disableProjectC(this);showProjectD(this);disableNav(this); showProject(this);">Look Good</div>
                 </li>
                 <li>
-                    <div id="project-E" class="imageAndText" onclick="disableProjectA(this);disableProjectB(this);disableProjectC(this);disableNav(this); showProject(this);">Closet</div>
+                    <div id="project-E" class="imageAndText" onclick="disableProjectA(this);disableProjectB(this);disableProjectC(this);disableProjectD(this);disableNav(this); showProject(this);">Closet</div>
                 </li>
                 <li>
-                    <div id="project-F" class="imageAndText" onclick="disableProjectA(this);disableProjectB(this);disableProjectC(this);disableNav(this); showProject(this);">Helvetica</div>
+                    <div id="project-F" class="imageAndText" onclick="disableProjectA(this);disableProjectB(this);disableProjectC(this);disableProjectD(this);disableNav(this); showProject(this);">Helvetica</div>
                 </li>
             </ul>
         </div>
@@ -627,61 +644,74 @@
     }
 
     const showProject = () => {
-        document.querySelector("#product-view-wrapper").classList.remove("display-none")
+        document.querySelector("#product-view-wrapper").classList.remove("display-none");
         document.querySelector("#product-banner").classList.remove("display-none");
     }
 
     const showProjectA = () => {
-        document.querySelector("#product-A").classList.remove("display-none")
+        document.querySelector("#product-A").classList.remove("display-none");
         document.querySelector("#banner-A").classList.remove("display-hidden");
-        document.querySelector(".product-view-element-A").classList.remove("display-none")
+        document.querySelector(".product-view-element-A").classList.remove("display-none");
 
     }
 
     const disableProjectA = () => {
         document.querySelector("#product-A").classList.add("display-none");
         document.querySelector("#banner-A").classList.add("display-hidden");
-        document.querySelector(".product-view-element-A").classList.add("display-none")
+        document.querySelector(".product-view-element-A").classList.add("display-none");
     }
 
     const showProjectB = () => {
         document.querySelector("#product-B").classList.remove("display-none")
         document.querySelector("#banner-B").classList.remove("display-hidden");
-        document.querySelector(".product-view-element-B").classList.remove("display-none")
+        document.querySelector(".product-view-element-B").classList.remove("display-none");
 
     }
 
     const disableProjectB = () => {
         document.querySelector("#product-B").classList.add("display-none");
         document.querySelector("#banner-B").classList.add("display-hidden");
-        document.querySelector(".product-view-element-B").classList.add("display-none")
+        document.querySelector(".product-view-element-B").classList.add("display-none");
     }
 
     const showProjectC = () => {
-        document.querySelector("#product-C").classList.remove("display-none")
+        document.querySelector("#product-C").classList.remove("display-none");
         document.querySelector("#banner-C").classList.remove("display-hidden");
-        document.querySelector(".product-view-element-C").classList.remove("display-none")
+        document.querySelector(".product-view-element-C").classList.remove("display-none");
 
     }
 
     const disableProjectC = () => {
         document.querySelector("#product-C").classList.add("display-none");
         document.querySelector("#banner-C").classList.add("display-hidden");
-        document.querySelector(".product-view-element-C").classList.add("display-none")
+        document.querySelector(".product-view-element-C").classList.add("display-none");
+    }
+
+    const showProjectD = () => {
+        document.querySelector("#product-D").classList.remove("display-none");
+        document.querySelector("#banner-D").classList.remove("display-hidden");
+        document.querySelector(".product-view-element-D").classList.remove("display-none");
+
+    }
+
+    const disableProjectD = () => {
+        document.querySelector("#product-D").classList.add("display-none");
+        document.querySelector("#banner-D").classList.add("display-hidden");
+        document.querySelector(".product-view-element-D").classList.add("display-none");
     }
 
 
     const showNav = () => {
-        document.querySelector("#header").classList.remove("display-none")
-        document.querySelector("#transition-wrapper").classList.remove("display-none")
-        document.querySelector("#products-wrapper").classList.add("display-none")
-        document.querySelector("#intro-text").classList.remove("display-none")
+        document.querySelector("#header").classList.remove("display-none");
+        document.querySelector("#transition-wrapper").classList.remove("display-none");
+        document.querySelector("#products-wrapper").classList.add("display-none");
+        document.querySelector("#intro-text").classList.remove("display-none");
     }
 
     const disableNav = () => {
-        document.querySelector("#header").classList.add("display-none")
-        document.querySelector("#transition-wrapper").classList.add("display-none")
-        document.querySelector("#products-wrapper").classList.remove("display-none")
+        document.querySelector("#header").classList.add("display-none");
+        document.querySelector("#transition-wrapper").classList.add("display-none");
+        document.querySelector("#products-wrapper").classList.remove("display-none");
 
     }
 </script>
