@@ -17,7 +17,7 @@
     }
 
     body {
-        overflow-x: visible;
+        overflow-x: hidden;
         background-color: whitesmoke;
     }
 
@@ -176,6 +176,15 @@
         margin-right: 50px;
     }
 
+    .product-view-element-D-map {
+        transform-origin: top left;
+        display: inline-block;
+        position: relative;
+        width: 450px;
+        margin-right: 50px;
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
     #product-A {
         position: relative;
         width: 600px;
@@ -227,6 +236,12 @@
     }
 
     .product-view-element-C-map img {
+        position: relative;
+        width: 600px;
+    }
+
+    
+    .product-view-element-D-map img {
         position: relative;
         width: 600px;
     }
@@ -767,7 +782,7 @@
                 <h1
                     style="display:block; font-size: 16px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
                     ABOUT</h1>
-                This is a virtual project for creating a male grooming platform
+                This is a virtual project for creating a male grooming platform.
             </div>
             <div class="product-view-element-D">
                 <h1
@@ -782,6 +797,37 @@
                 project is
                 about transposing a classical ritual for many boys, dudes, guys, and men around the world into the form
                 of a digital environment.
+            </div>
+            <div class="product-view-element-D">
+                <h1
+                    style="font-size: 16px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                    THE ROLE OF PLAY</h1>
+                There has been a growing presence of beauty drugstores in urban centers not only back home in South
+                Korea (OliveYoung, LOHB, Watsons, etc...) but also in the states (Sephora, Bluemercury, Ulta, etc...).
+                These physical environments resemble much of children's playground. Testable products, various brands
+                that allow customization, visually appealing store layout, and the non-instrusive sales people make
+                such spaces a fun area to explore cosmetic products. My goal is to isolate the elements of "play" when
+                exploring
+                grooming products and apply the design elements into the form of a digital platform.
+            </div>
+            <div class="product-view-element-D">
+                Simutaneously, it is also about making the experience of grooming a more personal and lasting
+                experience. Grooming is not really a choice for some people, while others do it just for the extra step.
+                Either way, much of the field observation demonstrated that there is a unequal representation of male
+                products in
+                such stores and that it is really difficult for men to orient themselves and behave naturally in such
+                environments. Applying the concept of a playground is an endeavor to break the stereotypes that enforce
+                classical gender roles and incite users to freely shop products that best represent the user's
+                lifestyle.
+            </div>
+            <div class="product-view-element-D-map">
+                <img src="images/image_027.png">
+            </div>
+            <div class="product-view-element-D-map">
+                <img src="images/image_026.png">
+            </div>
+            <div class="product-view-element-D-map">
+                <img src="images/image_028.jpg">
             </div>
         </div>
         <div id="product-D-dem" class="product-view-element-D-frame note display-none"
@@ -801,6 +847,7 @@
             <div class="product-view-element-D-small">
                 <img src="images/image_020.gif">
             </div>
+
             <div class="product-view-element-D">
                 <div style="height:300px; width:auto;"></div>
             </div>
@@ -949,6 +996,44 @@
         document.querySelector("#transition-wrapper").classList.add("display-none");
         document.querySelector("#products-wrapper").classList.remove("display-none");
     }
+
+    $(document).ready(function () {
+        $(".product-view-element-D-map").hover(function () {
+            $(this).stop().animate({
+                opacity: 1
+            }).siblings().stop().animate({
+                opacity: 0.0
+            });
+            $(".product-view-element-D-small").stop().animate({
+                opacity: 1
+            }).siblings().stop().animate({
+                opacity: 0.0
+            });
+            $(this).css("transform-origin", "top left");
+            $(this).css("transform", "scale(2.0)");
+        }, function () {
+            $(this).css("transform-origin", "top left");
+            $(this).css("transform", "scale(1.0)");
+            $(".product-view-element-D-small").siblings().stop().animate({
+                opacity: 1
+            });
+            $(this).siblings().stop().animate({
+                opacity: 1
+            });
+        });
+    }, function () {
+    });
+    $(".product-view-element-D").hover(function () {
+        $(this).stop().animate({
+            opacity: 1
+        }).siblings().stop().animate({
+            opacity: 0.0
+        });
+    }, function () {
+        $(this).siblings().stop().animate({
+            opacity: 1
+        });
+    });
 
     $(document).ready(function () {
         $(".product-view-element-C-map").hover(function () {
