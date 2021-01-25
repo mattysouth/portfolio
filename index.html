@@ -68,7 +68,7 @@
         display: inline-block;
         position: relative;
         top: 40px;
-        left: 7%;
+        left: 150px;
     }
 
     #images div {
@@ -95,10 +95,10 @@
     }
 
     #images {
-        display: inline-block;
+        display: inline;
         overflow: visible;
         padding: 0;
-        width: 600px;
+        width: 200pxs;
         height: 100px;
         list-style-type: none;
     }
@@ -107,56 +107,56 @@
         display: inline-block;
         position: relative;
         width: 450px;
-        margin-right: 50px;
+        left: 40px;
     }
 
     .product-view-element-B {
         display: inline-block;
         position: relative;
         width: 450px;
-        margin-right: 50px;
+        left: 40px;
     }
 
     .product-view-element-C {
         display: inline-block;
         position: relative;
         width: 800px;
-        margin-right: 50px;
+        left: 40px;
     }
 
     .product-view-element-D {
         display: inline-block;
         position: relative;
         width: 450px;
-        margin-right: 50px;
+        left: 40px;
     }
 
     .product-view-element-A-frame {
         display: inline-block;
         position: relative;
         width: 450px;
-        margin-right: 50px;
+        left: 40px;
     }
 
     .product-view-element-B-frame {
         display: inline-block;
         position: relative;
         width: 450px;
-        margin-right: 50px;
+        right: 35px;
     }
 
     .product-view-element-C-frame {
         display: inline-block;
         position: relative;
-        width: 800px;
-        margin-right: 50px;
+        width: 450px;
+        right: 35px;
     }
 
     .product-view-element-D-frame {
         display: inline-block;
         position: relative;
         width: 450px;
-        margin-right: 50px;
+        right: 35px;
     }
 
 
@@ -308,7 +308,7 @@
         display: inline-block;
         position: relative;
         top: 15%;
-        margin-left: 75px;
+        margin-left: 290px;
         width: 1200px;
         height: 600px;
         background-color: #ffffff;
@@ -481,8 +481,8 @@
             <a id="resume" class="menu" href="#">Resume</a>
         </div>
     </div>
-    <div id="transition-text-wrapper" style="display: inline-block;">
-        <h1 id="header" style="position: absolute; bottom:295px;">Environments Design and Design Research for
+    <div id="transition-text-wrapper" style="display:inline; position: fixed; top: 200px; margin-right: 200px;">
+        <h1 id="header" style="position: relative; bottom:85px;">Environments Design and Design Research for
             <span></span>
         </h1><span id="value-text" class="display-none">CONVICTION AND PATIENCE</span><span
             id="intro-text">VISION-STATEMENT– I always think about how design thinking can inform people to be more
@@ -703,7 +703,7 @@
                     style="display:block; font-size: 16px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
                     AMBIENCE</h1>
                 The peripheral data that initializes context and meaningful substance to the world. Design that doesn’t
-                consider ambient elements will risk of creating a solution that does not fit.
+                consider ambient elements will risk creating a solution that does not fit.
 
                 It allows pervasive communication by establishing a common currency in a social, cultural, and economic
                 context. Shared values that orient complexity and classify the abstract.
@@ -764,7 +764,8 @@
                 of a digital environment.
             </div>
         </div>
-        <div id="product-D-dem" class="product-view-element-D-frame note display-none" style="width: 1600px !important;">
+        <div id="product-D-dem" class="product-view-element-D-frame note display-none"
+            style="width: 1600px !important;">
             <br>
             <div class="product-view-element-D-small">
                 <img src="images/image_016.gif">
@@ -918,14 +919,14 @@
 
 
     const showNav = () => {
-        document.querySelector("#header").classList.remove("display-none");
+
         document.querySelector("#transition-wrapper").classList.remove("display-none");
         document.querySelector("#products-wrapper").classList.add("display-none");
         document.querySelector("#intro-text").classList.remove("display-none");
     }
 
     const disableNav = () => {
-        document.querySelector("#header").classList.add("display-none");
+
         document.querySelector("#transition-wrapper").classList.add("display-none");
         document.querySelector("#products-wrapper").classList.remove("display-none");
     }
